@@ -21,35 +21,22 @@ public class Ejercico3extraextra {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
-        
-        
-          
-        
-       
-        
-      /* A través de un menú de opciones:
-o A) ingresar la contraseña, recordar que antes de guardarla debe ser ingresada una
-contraseña valida).
-o B) Mensaje al usuario que tipo de NIVEL es su contraseña
-o C) Modificar contraseña, donde primero debe poner su contraseña anterior para
-dar permiso
-o C) Modificar nombre, donde primero debe poner su contraseña para dar permiso,
-SINO impedir cambios
-o D) Modificar DNI, donde primero debe poner su contraseña para dar permiso,
-SINO impedir cambios*/
-
+ 
        servicios cpass = new servicios();
         classPass nombre = new classPass();
+      
+        boolean salir = false;
         
         do {
    
             System.out.println("a. ingresar contraseña valida \n"
                     + "b.su nivel de \n"
                     + "c.modificar contraseña \n"
-                    + "d.modificar DNI");
+                    + "d.modificar DNI \n"
+                    + "e.salir");
 
             String opc = leer.next();
-
+            
             switch (opc) {
 
                 case "a":
@@ -63,10 +50,12 @@ SINO impedir cambios*/
                     break;
                 case "d":
                     break;
+                case "e": salir= true;
+                    break;
                 default:
                     throw new AssertionError();
             }
-        } while (true);
+        } while (!salir  );
     }
         
 

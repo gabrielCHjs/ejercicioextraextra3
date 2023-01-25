@@ -42,38 +42,34 @@ SINO impedir cambios*/
         classPass nombre = new classPass();
         
         do {
-            
-        
-        
-        System.out.println("a. ingresar contraseña valida \n"
-                + "b.su nivel de \n"
-                + "c.modificar contraseña \n"
-                + "d.modificar DNI");
-        
-        String opc = leer.next();
-        
-         
-        switch (opc) {
-               
-            case "a":
-             
-                nombre = cpass.crearPass();
-            
-            break;
-            case "b":
-               
-                cpass.analizarPass(nombre.getPass()); 
-           break;
-            case "c":
-              
-                 cpass.modificarDatos(nombre);
-                 break;
-            case "d":
-                break;
-            default:
-                throw new AssertionError();
-                
-        }
+   
+            System.out.println("a. ingresar contraseña valida \n"
+                    + "b.su nivel de \n"
+                    + "c.modificar contraseña \n"
+                    + "d.modificar DNI");
+
+            String opc = leer.next();
+
+            switch (opc) {
+
+                case "a":
+
+                    nombre = cpass.crearPass();
+
+                    break;
+                case "b":
+
+                    cpass.analizarPass(nombre.getPass());
+                    break;
+                case "c":
+
+                    cpass.modificarDatos(nombre);
+                    break;
+                case "d":
+                    break;
+                default:
+                    throw new AssertionError();
+            }
         } while (true);
     }
         

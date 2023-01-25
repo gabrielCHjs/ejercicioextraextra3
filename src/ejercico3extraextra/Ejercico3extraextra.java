@@ -53,16 +53,12 @@ SINO impedir cambios*/
             switch (opc) {
 
                 case "a":
-
                     nombre = cpass.crearPass();
-
                     break;
                 case "b":
-
                     cpass.analizarPass(nombre.getPass());
                     break;
                 case "c":
-
                     cpass.modificarDatos(nombre);
                     break;
                 case "d":

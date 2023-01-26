@@ -74,22 +74,36 @@ public class servicios {
        }else { System.out.println("su nivel es bajo"); }
    }
    //public void modificarDatos (classPass p1 ){
-   public void modificarDatos (classPass p1){
+   public void modificarDatos (classPass p1, int op){
         System.out.println("cambio de datos");
        System.out.println("ingresa contraseña");
        String j = leer.next();
        
        if (j.equalsIgnoreCase(p1.getPass())) {
-           System.out.println("modificar nombre");
-           p1.setNombre(leer.next());
+           switch(op) {
+               case 1:
+                   System.out.println("modificar nombre");
+                   p1.setNombre(leer.next());
+                   break;
+               case 2:
+                   System.out.println("modificar DNI");
+                   p1.setDni(leer.next());
+                   break;
+           }
            
-             System.out.println("modificar DNI");
-           p1.setDni(leer.next());
+           
+             
        } else {System.out.println("contraseña incorrecta");}
        
    }
 
-   
+   public void mostrarPass(classPass p1){
+       System.out.println("Datos Pass ");
+       System.out.println("Nombre: "+ p1.getNombre());
+       System.out.println("DNI: " + p1.getDni());
+       System.out.println("Contraseña: " + p1.getPass());
+       
+   }
 
   
    

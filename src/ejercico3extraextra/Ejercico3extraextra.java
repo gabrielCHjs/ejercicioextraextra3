@@ -33,7 +33,8 @@ public class Ejercico3extraextra {
                     + "b.su nivel de \n"
                     + "c.modificar contraseña \n"
                     + "d.modificar DNI \n"
-                    + "e.salir");
+                    + "e.mostrar datos\n"
+                    + "f.salir");
 
             String opc = leer.next();
             
@@ -46,11 +47,15 @@ public class Ejercico3extraextra {
                     cpass.analizarPass(nombre.getPass());
                     break;
                 case "c":
-                    cpass.modificarDatos(nombre);
+                    cpass.modificarDatos(nombre,1);
                     break;
-                case "d":
+                case "d": 
+                    cpass.modificarDatos(nombre,2);
                     break;
-                case "e": salir= true;
+                case "e": 
+                    cpass.mostrarPass(nombre);
+                    break; 
+                case "f": salir= true;
                     break;
                 default:
                     throw new AssertionError();
@@ -58,6 +63,8 @@ public class Ejercico3extraextra {
         } while (!salir  );
     }
         
+    
+    
 
     public Ejercico3extraextra() {
     }

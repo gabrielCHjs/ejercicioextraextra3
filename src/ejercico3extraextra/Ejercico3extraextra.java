@@ -41,7 +41,7 @@ public class Ejercico3extraextra {
             switch (opc) {
 
                 case "a":
-                    nombre = cpass.crearPass();
+                    nombre.setPass(cpass.crearPass());
                     break;
                 case "b":
                     cpass.analizarPass(nombre.getPass());

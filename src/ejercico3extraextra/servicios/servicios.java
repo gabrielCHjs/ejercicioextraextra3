@@ -24,7 +24,7 @@ public class servicios {
     
     
     
-   public classPass crearPass (){
+   public String crearPass (){
        System.out.println("ingresar contraseña");
       String pass ;
        pass = leer.next();
@@ -37,7 +37,7 @@ public class servicios {
        } while (pass.length()!=10);
        }
          System.out.println( "ingreso correcto: "+ pass );
-       return new classPass(pass);
+       return pass;
      
    }
    
